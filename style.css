@@ -1,0 +1,96 @@
+body {
+    font-family: 'Arial, sans-serif';
+    background-color: #f0f8ff;
+    /* overflow: hidden; */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    z-index: 10;
+}
+
+.photo {
+    width: 80%;
+    border-radius: 15px 15px 0 0;
+}
+
+h1 {
+    color: #ff69b4;
+    margin: 20px 0 10px;
+}
+
+.message {
+    color: #555;
+    margin: 0 0 20px;
+}
+
+button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff85c1;
+}
+
+.hidden {
+    display: none;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ff69b4;
+}
+
+#fallingElements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.element {
+    position: absolute;
+    top: -100px;
+    animation: fall 10s infinite;
+    will-change: transform;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 90%;
+    }
+}
